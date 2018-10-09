@@ -4,77 +4,49 @@ var Name = prompt("Hello Beautiful, what is your Name?");
 var interest= prompt("which of the two calculators Would you like? the Regular(R) or Advanced (a)");
 
 //First if-statment for the regular operation along with variable to store the numbers in.
-if (interest== "Regular"){
+if (interest== "Regular" || interest=="R"){
   console.log(Name, "you want the Regular");
   var Num1= parseInt(prompt("Can I have the first Number please?"));
   var Num2 = parseInt(prompt("Can I have the second Number please?"));
   var operation= prompt("Which operation do you want?, (Add, Subtract, Multiple or divide)");
 // If-statment for the operations, when operations are selected which line will generate the result
-  if (operation== "Add") {
+  if (operation== "A") {
     console.log("Your sum is:", Num1+Num2);
   }
-  else if (operation== "Subtract") {
+  else if (operation== "S") {
   console.log("Your sum is:", Num1-Num2);
   }
-  else if (operation== "Multiple") {
+  else if (operation== "M") {
   console.log("Your sum is:", Num1*Num2);
   }
-  else {
+  else if (operation== "D") {
   console.log("Your sum is:", Num1/Num2);
   }
+  else {
+    console.log("nothing" );
+  }
 }
-// This part is doing the first one again however just making it easier to press R instead of writting the whole word of Regular as sometimes its easy to just press R than write it
-  else if (interest=="R") {
-    var num1= prompt("Can I have the first Number please?");
-    var num2 = prompt("Can I have the second Number please?");
-    var ope= prompt("Which operation do you want?, (Add, Subtract, Multiple or divide)");
 
-    if (ope== "Add") {
-    console.log("Your sum is:", num1+num2);
-    }
-      else if (ope== "Subtract") {
-        console.log("Your sum is:", num1-num2);
-        }
-          else if (ope== "Multiple") {
-              console.log("Your sum is:", num1*num2);
-              }
-                else {
-                    console.log("Your sum is:", num1/num2);
-                    }
-                  }
+// This part is doing the first one again however just making it easier to press R instead of writting the whole word of Regular as sometimes its easy to just press R than write it
+
 // This part of the code is doing it for the advanced calculator doing th Power and Square root calculation
-else if (interest= "Advanced") {
+else if (interest== "Advanced" ||interest=="A") {
   console.log(Name, "you want the Advanced");
   var Num = prompt("Can I have the Number please?");
   var operator= prompt("Which operation do you want?, (Power or Square root)");
 
-  if (operator== "Power") {
+  if (operator== "P") {
   console.log("The power is:", Math.pow(Num, 2));
   }
-  else if  (operator== "Square root")
+  else if  (operator== "Square root"||operator== "S")
    {
   console.log("The Square root is:", Math.sqrt(Num));
    }
    else {
      console.log("Notting mate, ");
    }
-  }
+}
 // Doing the Advanced calculation again this time just using the letter A instead
-   else if (interest=="A") {
-     var Number1 = prompt("Can I have the Number please?");
-       var operator= prompt("Which operation do you want?, (Power or Square root)");
-
-          if (operator== "Power") {
-             console.log("The power is:", Math.pow(Number1, 2));
-           }
-             else if  (operator== "Square root")
-              {
-               console.log("The Square root is:", Math.sqrt(Number1));
-              }
-              else {
-                console.log("Notting mate, ");
-              }
-    }
 
 else {
   console.log("Sorry Beautiful,Can't help you, your on your own mate. Just live your best life!!!!");
